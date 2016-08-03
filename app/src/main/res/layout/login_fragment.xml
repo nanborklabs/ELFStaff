@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:id="@+id/user_name_text"
+        android:layout_marginTop="@dimen/user_name_box_margin_top"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:hint="User Name"
+        android:layout_height="@dimen/user_name_height">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:id="@+id/user_name"/>
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_below="@id/user_name_text"
+        android:layout_marginTop="@dimen/pass_margin_top"
+        android:layout_marginLeft="32dp"
+        android:hint="Password"
+        android:layout_marginRight="32dp"
+        android:layout_height="@dimen/user_name_height"
+        android:id="@+id/password_text_layout">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:id="@+id/password_box"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:layout_width="@dimen/login_button_width"
+        android:layout_height="@dimen/login_button_heigt"
+        android:text="Login"
+        android:id="@+id/submit_button"
+        android:layout_below="@+id/password_text_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/button_margin_top" />
+</RelativeLayout>
