@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Add Students to know their Reports."
+        android:id="@+id/textView3"
+        android:layout_marginTop="@dimen/accet_page__info_margin_top"
+        android:textSize="18sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/elf_id_edit_text"
+        android:layout_alignStart="@+id/elf_id_edit_text" />
+
+    <android.support.design.widget.TextInputEditText
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/accept_page_margin_left"
+        android:hint="ELF ID"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/edit_text_margin_top"
+        android:layout_below="@+id/textView3"
+        android:id="@+id/elf_id_edit_text"
+        android:layout_alignRight="@+id/student_name"
+        android:layout_alignEnd="@+id/student_name" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Student Name"
+        android:id="@+id/student_name_tv"
+        style="@style/accept_right_textview"
+        android:layout_below="@+id/elf_id_edit_text"
+        android:layout_alignLeft="@+id/elf_id_edit_text"
+        android:layout_alignStart="@+id/elf_id_edit_text"
+        android:layout_marginTop="@dimen/student_margin_top" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Class"
+        style="@style/accept_right_textview"
+        android:id="@+id/class_tv"
+        android:layout_below="@+id/student_name_tv"
+        android:layout_alignLeft="@+id/student_name"
+        android:layout_alignStart="@+id/student_name_tv"
+        android:layout_marginTop="@dimen/class_margin_top" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Board"
+        style="@style/accept_right_textview"
+        android:id="@+id/board_tv"
+        android:layout_below="@id/class_tv"
+        android:layout_marginTop="@dimen/board_margin_top"
+        android:layout_alignLeft="@+id/student_name"
+        android:layout_alignStart="@+id/student_name_tv" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        android:text="Krishnan RA"
+        style="@style/accept_right_textview"
+        android:id="@+id/student_name"
+        android:layout_above="@+id/class_tv"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="@dimen/accept_page_text_right_margin"
+        android:layout_marginEnd="64dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="10 Std"
+        style="@style/accept_right_textview"
+        android:id="@+id/class_name"
+        android:layout_above="@+id/board_tv"
+        android:layout_alignLeft="@+id/student_name"
+        android:layout_alignStart="@+id/student_name"
+        android:layout_alignRight="@+id/student_name"
+        android:layout_alignEnd="@+id/student_name" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Samacheer Kalvi"
+        style="@style/accept_right_textview"
+        android:id="@+id/board_name"
+        android:layout_alignTop="@+id/board_tv"
+        android:layout_alignLeft="@+id/class_name"
+        android:layout_alignStart="@+id/class_name" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send Request"
+        android:id="@+id/request_button"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/button_margin_bottom" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Having Trouble?"
+        android:id="@+id/textView4"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/trouble_text_margin_b" />
+</RelativeLayout>
