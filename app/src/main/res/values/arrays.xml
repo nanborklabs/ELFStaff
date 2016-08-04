@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="subjects_list">
+        <item name="Phy">Phsycis</item>
+        <item name="che">Chemistry</item>
+        <item name="mat">Maths</item>
+        <item name="eng">English</item>
+        <item name="bio">Biology</item>
+    </string-array>
+
+    <string-array name="std_list">
+        <item name="10">10</item>
+        <item name= "12">12</item>
+    </string-array>
+</resources>

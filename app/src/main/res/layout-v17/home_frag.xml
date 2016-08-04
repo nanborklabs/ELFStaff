@@ -66,7 +66,7 @@
         android:layout_width="match_parent"
         app:cardBackgroundColor="@color/card_bd_middle"
         android:layout_margin="8dp"
-        android:id="@+id/second_card"
+        android:id="@id/second_card"
 
         android:layout_height="300dp">
 
@@ -74,7 +74,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="300dp"
-            android:id="@+id/third_card"
 
 
             android:orientation="vertical">
@@ -92,11 +91,6 @@
                 android:layout_width="0dp"
                 android:layout_height="60dp"
                 android:id="@+id/std_spinner"
-                android:gravity="center"
-                android:paddingLeft="32dp"
-                 android:paddingStart="32dp"
-                style="@style/Base.Widget.AppCompat.Spinner"
-                android:layout_marginLeft="16dp"
                 android:textDirection="ltr"
                 android:layout_weight="1"
 
@@ -110,7 +104,6 @@
                 android:layout_height="60dp"
                 android:textDirection="rtl"
              android:layout_weight="1"
-                android:gravity="center"
                 android:id="@+id/subject_spinner"
               />
 
@@ -121,7 +114,7 @@
             <!--has text 3 Lineara layouts to hold text view-->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:weightSum="3"
                 android:orientation="horizontal"
                 android:layout_weight="2.5">
@@ -352,6 +345,7 @@
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_weight="1"
+        android:id="@id/third_card"
         android:layout_margin="8dp"
         android:layout_height="140dp">
         <RelativeLayout
@@ -411,9 +405,8 @@
                 android:text="1212"
                 android:layout_alignTop="@id/home_rank_no"
                 android:id="@+id/home_bottom_rank"
-                android:textColor="@color/red"
+                android:textColor="@color/green"
                 android:textSize="22sp"
-
                 android:layout_alignParentTop="true"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true"
@@ -446,9 +439,9 @@
                 android:layout_marginEnd="25dp"
                 android:layout_alignBottom="@id/top_rank_text"
                 android:gravity="center"
-                android:textColor="@color/red"
+                android:textColor="@color/green"
                android:layout_alignTop="@id/top_rank_text"
-                android:layout_alignParentRight="true"
+
                 android:layout_alignParentEnd="true" />
 
         </RelativeLayout>

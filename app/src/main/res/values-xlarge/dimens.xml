@@ -22,4 +22,9 @@
     <dimen name="accept_page_text_right_margin">64dp</dimen>
     <dimen name="accept_page_margin_left">32dp</dimen>
     <dimen name="edit_text_margin_top">32dp</dimen>
+    <dimen name="accept_text_size_list">18sp</dimen>
+    <dimen name="accept_margin_list_top">32dp</dimen>
+    <dimen name="request_button_margin_top">124dp</dimen>
+    <dimen name="request_page_trouble_button_mtop">32dp</dimen>
+    <dimen name="req_editbox_height">60dp</dimen>
 </resources>

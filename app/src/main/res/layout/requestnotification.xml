@@ -3,6 +3,7 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -12,12 +13,13 @@
         android:layout_marginTop="@dimen/accet_page__info_margin_top"
         android:textSize="18sp"
         android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
         android:layout_alignLeft="@+id/elf_id_edit_text"
         android:layout_alignStart="@+id/elf_id_edit_text" />
 
     <android.support.design.widget.TextInputEditText
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="@dimen/req_editbox_height"
         android:gravity="center"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="@dimen/accept_page_margin_left"
@@ -26,8 +28,8 @@
         android:layout_marginTop="@dimen/edit_text_margin_top"
         android:layout_below="@+id/textView3"
         android:id="@+id/elf_id_edit_text"
-        android:layout_alignRight="@+id/student_name"
-        android:layout_alignEnd="@+id/student_name" />
+        android:layout_alignRight="@+id/board_name"
+        android:layout_alignEnd="@+id/board_name" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -77,7 +79,7 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_marginRight="@dimen/accept_page_text_right_margin"
-        android:layout_marginEnd="64dp" />
+        android:layout_marginEnd="@dimen/accept_page_text_right_margin" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -108,9 +110,9 @@
         android:layout_height="wrap_content"
         android:text="Send Request"
         android:id="@+id/request_button"
-        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/request_button_margin_top"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="@dimen/button_margin_bottom" />
+        android:layout_below="@id/board_name" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -118,7 +120,8 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Having Trouble?"
         android:id="@+id/textView4"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@id/request_button"
+        android:layout_marginTop="@dimen/request_page_trouble_button_mtop"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="@dimen/trouble_text_margin_b" />
+         />
 </RelativeLayout>
