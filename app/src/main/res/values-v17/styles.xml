@@ -25,4 +25,9 @@
         <item name="android:textColor">@color/black</item>
         <item name="android:textSize">@dimen/accept_page_text_Size</item>
     </style>
+
+    <style name="report_page_list_textview">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">18sp</item>
+    </style>
 </resources>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:weightSum="5"
+              android:layout_height="60dp">
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        style="@style/report_page_list_textview"
+        android:layout_weight="1.5"
+        android:id="@+id/category_text"/>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1.5"
+        android:layout_height="60dp"
+        android:id="@+id/nos_students"/>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1.5"
+        android:layout_height="60dp"
+        android:id="@+id/growth_percent"
+        />
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_weight="0.5"
+        android:layout_height="60dp"
+        android:id="@+id/growth_icon"/>
+
+
+</LinearLayout>

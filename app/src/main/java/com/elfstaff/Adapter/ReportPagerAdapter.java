@@ -2,15 +2,15 @@ package com.elfstaff.Adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.PagerAdapter;
+import android.support.v4.app.FragmentStatePagerAdapter;
 
 import com.elfstaff.Fragments.ReportPagerFragment;
 
 /**
  * Created by nandhu on 5/8/16.
+ *
  */
-public class ReportPagerAdapter extends FragmentPagerAdapter {
+public class ReportPagerAdapter extends FragmentStatePagerAdapter {
     public ReportPagerAdapter(FragmentManager childFragmentManager) {
         super(childFragmentManager);
     }
@@ -41,13 +41,15 @@ public class ReportPagerAdapter extends FragmentPagerAdapter {
                mFragment=new ReportPagerFragment();
                break;
            case 1:
-
+                mFragment=new ReportPagerFragment();
                break;
            case 2:
+               mFragment=new ReportPagerFragment();
                break;
            case 3:
+               mFragment=new ReportPagerFragment();
                break;
-           case 4:
+           case 4:mFragment=new ReportPagerFragment();
                break;
        }
 
