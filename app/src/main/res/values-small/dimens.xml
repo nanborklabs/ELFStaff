@@ -16,4 +16,5 @@
     <dimen name="request_button_margin_top">16dp</dimen>
     <dimen name="board_margin_top">12dp</dimen>
     <dimen name="req_editbox_height">40dp</dimen>
+    <dimen name="report_pager_text_box_margin_side">24dp</dimen>
 </resources>
