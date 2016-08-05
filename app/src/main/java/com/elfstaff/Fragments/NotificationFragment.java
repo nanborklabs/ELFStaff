@@ -72,8 +72,14 @@ public class NotificationFragment extends android.support.v4.app.Fragment {
         else {
             fm=getChildFragmentManager();
             mPager.setAdapter(new NotificationPagerAdapter(fm));
+            mPager.setPageTransformer(false, new ViewPager.PageTransformer() {
+                @Override
+                public void transformPage(View page, float position) {
+
+                }
+            });
         }
-//        mPager.setAdapter(new NotificationPagerAdapter(getChildFragmentManager()));
+        mPager.setAdapter(new NotificationPagerAdapter(getChildFragmentManager()));
         mTabLayout.setupWithViewPager(mPager);
 
 

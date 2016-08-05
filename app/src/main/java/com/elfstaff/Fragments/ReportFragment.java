@@ -7,6 +7,7 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import com.elfstaff.Adapter.ReportPagerAdapter;
@@ -20,7 +21,7 @@ import butterknife.ButterKnife;
  */
 public class ReportFragment extends android.support.v4.app.Fragment {
     private  View mView;
-    @BindView(R.id.radio_gro)
+    @BindView(R.id.radio_group_subject)
     RadioGroup mSubject_selected;
     @BindView(R.id.report_tab)
     TabLayout mtabLayout;
@@ -56,6 +57,9 @@ public class ReportFragment extends android.support.v4.app.Fragment {
 
 
         mPager.setAdapter(new ReportPagerAdapter(getChildFragmentManager()));
+        mtabLayout.setupWithViewPager(mPager);
+        RadioButton button=(RadioButton) mSubject_selected.findViewById(R.id.radio_p);
+        button.setChecked(true);
         return mView;
     }
 

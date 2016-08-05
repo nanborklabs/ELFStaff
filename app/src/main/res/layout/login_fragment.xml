@@ -36,6 +36,8 @@
         android:layout_height="@dimen/login_button_heigt"
         android:text="Login"
         android:id="@+id/submit_button"
+        android:background="@color/colorPrimary"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_below="@+id/password_text_layout"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/button_margin_top" />

@@ -30,4 +30,6 @@
         <item name="android:gravity">center</item>
         <item name="android:textSize">18sp</item>
     </style>
+
+    <style name="report_page_textview"></style>
 </resources>

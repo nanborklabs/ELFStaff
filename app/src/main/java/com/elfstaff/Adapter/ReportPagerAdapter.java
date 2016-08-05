@@ -11,6 +11,9 @@ import com.elfstaff.Fragments.ReportPagerFragment;
  *
  */
 public class ReportPagerAdapter extends FragmentStatePagerAdapter {
+
+
+
     public ReportPagerAdapter(FragmentManager childFragmentManager) {
         super(childFragmentManager);
     }
@@ -31,6 +34,7 @@ public class ReportPagerAdapter extends FragmentStatePagerAdapter {
                 return "L4";
 
         }
+        return null;
     }
 
     @Override
