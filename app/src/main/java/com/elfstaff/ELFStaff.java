@@ -37,6 +37,9 @@ public class ELFStaff extends AppCompatActivity
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
+        getSupportFragmentManager().beginTransaction().replace(R.id.frag_holder,new RegisterFragment())
+                .commit();
+
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
     }
