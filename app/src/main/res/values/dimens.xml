@@ -37,4 +37,5 @@
     <dimen name="req_editbox_height">60dp</dimen>
     <dimen name="report_pager_text_box_margin_side">24dp</dimen>
     <dimen name="report_pager_margin_top">16dp</dimen>
+    <dimen name="submit_but_tmargin">40dp</dimen>
 </resources>

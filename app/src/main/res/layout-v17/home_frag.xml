@@ -9,446 +9,505 @@
 
 
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:layout_margin="4dp"
-    android:layout_width="match_parent"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:app="http://schemas.android.com/apk/res-auto"
+                  android:orientation="vertical"
+                  android:layout_margin="4dp"
+
+                  android:background="#2E2F4F"
+                  android:layout_width="match_parent"
 
 
 
-    android:layout_height="match_parent">
+                  android:layout_height="match_parent">
 
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        app:cardBackgroundColor="@color/card_top"
-        android:layout_weight="1"
-        android:id="@+id/first_card"
-        android:layout_margin="8dp"
-        android:layout_height="110dp">
-
-        <LinearLayout
+        <android.support.v7.widget.CardView
             android:layout_width="match_parent"
-            android:orientation="vertical"
+            app:cardBackgroundColor="#5E619C"
+            android:layout_weight="1"
+            android:id="@+id/first_card"
+            android:layout_margin="8dp"
+            android:layout_height="150dp">
 
-            android:layout_height="110dp"
-         >
-            <TextView
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:text="Number of Students"
-                android:textColor="@color/white"
-                android:layout_gravity="center"
-                android:textSize="@dimen/no_of_students_text_size"
-                android:gravity="center"
+                android:orientation="vertical"
 
-               />
-            <TextView
-                android:layout_width="match_parent"
-                android:textSize="@dimen/no_text_size"
-                android:layout_height="60dp"
-                android:padding="8dp"
-                android:textColor="@color/white"
-                android:gravity="center"
-                android:layout_gravity="center"
+                android:layout_height="150dp"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="Number of Students"
+                    android:textColor="#DDE0EE"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="12dp"
+                    android:textSize="@dimen/no_of_students_text_size"
+                    android:layout_marginTop="12dp"
+                    android:gravity="left"
 
-                android:text="121"
-                />
-        </LinearLayout>
+                    android:id="@+id/textView9"
+                    android:layout_toLeftOf="@+id/textView11"
+                    android:layout_toStartOf="@+id/textView11"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textSize="@dimen/no_text_size"
+                    android:layout_height="60dp"
+                    android:padding="8dp"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:layout_gravity="center"
 
-    </android.support.v7.widget.CardView>
+                    android:text="121"
+                    android:id="@+id/textView11"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignBottom="@+id/textView12"
+                    android:layout_alignTop="@+id/textView9"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#DDE0EE"
+                    android:text="Total Number of students from all the classes"
+                    android:id="@+id/textView12"
+                    android:layout_below="@+id/textView9"
+                    android:layout_alignLeft="@+id/textView9"
+                    android:paddingRight="16dp"
+                    android:layout_alignStart="@+id/textView9"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toLeftOf="@+id/textView11"
+                    android:layout_marginBottom="8dp"
+                    android:layout_toStartOf="@+id/textView11"/>
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
 
 
 
-
-
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        app:cardBackgroundColor="@color/card_bd_middle"
-        android:layout_margin="8dp"
-        android:id="@id/second_card"
-
-        android:layout_height="300dp">
-
-        <!--TOp level linear layout has spinner and horizontal linear layout as childer-->
-        <LinearLayout
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="300dp"
+            android:layout_height="wrap_content"
+            android:text="DashBoard"
+            android:textSize="22sp"
+            android:textColor="#DDE0EE"
+            android:textStyle="bold"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            />
 
-
-            android:orientation="vertical">
-
-            <!--contains spinner-->
-             <LinearLayout
+        <TextView
             android:layout_width="match_parent"
-            android:weightSum="2"
-
-            android:orientation="horizontal"
-            android:layout_height="60dp">
-
-
-            <Spinner
-                android:layout_width="0dp"
-                android:layout_height="60dp"
-                android:id="@+id/std_spinner"
-                android:textDirection="ltr"
-                android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textColor="#DDE0EE"
+            android:text="Cumulative Report of all students"
+            android:textSize="18sp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            />
 
 
 
-                />
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            app:cardBackgroundColor="#2E2F4F"
+            android:layout_margin="8dp"
+            android:id="@+id/second_card"
 
+            android:layout_height="300dp">
 
-            <Spinner
-                android:layout_width="0dp"
-                android:layout_height="60dp"
-                android:textDirection="rtl"
-             android:layout_weight="1"
-                android:id="@+id/subject_spinner"
-              />
-
-
-        </LinearLayout>
-
-
-            <!--has text 3 Lineara layouts to hold text view-->
+            <!--TOp level linear layout has spinner and horizontal linear layout as childer-->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:weightSum="3"
-                android:orientation="horizontal"
-                android:layout_weight="2.5">
-
-                <!--first column of text view-->
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:weightSum="5"
-                    android:orientation="vertical"
-                    android:layout_height="match_parent"
-                    >
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="Marks"
-                        android:id="@+id/marks"
-                        android:layout_gravity="center"
-                        android:layout_weight="2"
-                        style="@style/card_middle_text"
-                        android:gravity="center"
-                         />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="0-33"
-                        style="@style/card_middle_text"
-                        android:gravity="center"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:id="@+id/three_three" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="33-66"
-                        android:layout_gravity="center"
-                        style="@style/card_middle_text"
-                        android:layout_weight="1"
-                        android:id="@+id/six_six" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="66-99"
-                        android:layout_gravity="center"
-
-                        style="@style/card_middle_text"
-                        android:id="@+id/nine_nine" />
-                </LinearLayout>
-                <!--second column of text view-->
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:layout_height="match_parent"
-                    >
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                      android:textAppearance="?android:textAppearanceLarge"
-                        android:text="No. of Students"
-                        android:textSize="20sp"
-                        style="@style/card_middle_text"
-                        android:id="@+id/nos"
-                        android:layout_weight="2"
-                        android:gravity="center"
-                        android:layout_gravity="fill" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="24"
-                        android:layout_gravity="center"
-                        style="@style/card_middle_text"
-                        android:layout_weight="1"
-                        android:id="@+id/nos_below_33" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="45"
-                        android:layout_gravity="center"
-                        style="@style/card_middle_text"
-                        android:layout_weight="1"
-                        android:id="@+id/nos_below_66" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="78"
-                        android:layout_gravity="center"
-                        style="@style/card_middle_text"
-                        android:id="@+id/nos_below_99" />
-
-                </LinearLayout>
-
-                <!--third column of textview-->
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:weightSum="4"
-
-                    android:layout_height="match_parent"
-                    >
+                android:layout_height="300dp"
 
 
+                android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="Growth"
-
-                        android:id="@+id/textView2"
-                        style="@style/card_middle_text"
-
-                        android:layout_weight="1"
-
-                        android:gravity="center"
-                        android:layout_gravity="center_horizontal" />
+                <!--contains spinner-->
                 <LinearLayout
                     android:layout_width="match_parent"
+                    android:weightSum="2"
 
                     android:orientation="horizontal"
-                    android:layout_weight="1"
-                    android:weightSum="3"
+                    android:layout_height="60dp">
 
-                    android:layout_height="0dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="11%"
-                        style="@style/card_middle_text"
-                        android:gravity="center"
-                        android:layout_gravity="center"
-                        android:layout_weight="2"
-
-                        android:id="@+id/percent_33" />
-                    <ImageView
-                        android:layout_width="wrap_content"
+                    <Spinner
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:id="@+id/std_spinner"
+                        android:textDirection="ltr"
                         android:layout_weight="1"
 
 
-                        style="@style/image_card_middle"
-                        android:src="@drawable/ic_menu_gallery"
-                        android:layout_height="wrap_content" />
+
+                        />
+
+
+                    <Spinner
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:textDirection="rtl"
+                        android:layout_weight="1"
+                        android:id="@+id/subject_spinner"
+                        />
+
+
+                </LinearLayout>
+
+
+                <!--has text 3 Lineara layouts to hold text view-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:weightSum="3"
+                    android:orientation="horizontal"
+                    android:layout_weight="2.5">
+
+                    <!--first column of text view-->
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:weightSum="5"
+                        android:orientation="vertical"
+                        android:layout_height="match_parent"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="Marks"
+                            android:id="@+id/marks"
+                            android:layout_gravity="center"
+                            android:layout_weight="2"
+                            style="@style/card_middle_text"
+                            android:gravity="center"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="0-33"
+                            style="@style/card_middle_text"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:id="@+id/three_three" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="33-66"
+                            android:layout_gravity="center"
+                            style="@style/card_middle_text"
+                            android:layout_weight="1"
+                            android:id="@+id/six_six" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="66-99"
+                            android:layout_gravity="center"
+
+                            style="@style/card_middle_text"
+                            android:id="@+id/nine_nine" />
                     </LinearLayout>
-                <LinearLayout
-
-                    android:layout_width="match_parent"
-
-                    android:orientation="horizontal"
-                    android:layout_weight="1"
-                    android:weightSum="3"
-
-                    android:layout_height="0dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="11%"
-                        style="@style/card_middle_text"
-                        android:layout_weight="2"
-                        android:gravity="center"
-                        android:layout_gravity="center"
-                        android:id="@+id/percent_66" />
-                    <ImageView
-                        android:layout_width="wrap_content"
+                    <!--second column of text view-->
+                    <LinearLayout
+                        android:layout_width="0dp"
                         android:layout_weight="1"
-                        style="@style/image_card_middle"
-                        android:src="@drawable/ic_menu_share"
-                        android:layout_height="wrap_content" />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_height="match_parent"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:textAppearanceLarge"
+                            android:text="No. of Students"
+                            android:textSize="20sp"
+                            style="@style/card_middle_text"
+                            android:id="@+id/nos"
+                            android:layout_weight="2"
+                            android:gravity="center"
+                            android:layout_gravity="fill" />
 
-                    android:layout_weight="1"
-                    android:weightSum="3"
-                    android:orientation="horizontal"
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="24"
+                            android:layout_gravity="center"
+                            style="@style/card_middle_text"
+                            android:layout_weight="1"
+                            android:id="@+id/nos_below_33" />
 
-                    android:layout_height="0dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="45"
+                            android:layout_gravity="center"
+                            style="@style/card_middle_text"
+                            android:layout_weight="1"
+                            android:id="@+id/nos_below_66" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        style="@style/card_middle_text"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="11%"
-                        android:gravity="center"
-                        android:layout_gravity="center"
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="78"
+                            android:layout_gravity="center"
+                            style="@style/card_middle_text"
+                            android:id="@+id/nos_below_99" />
 
-                        android:layout_weight="2"
-                        android:id="@+id/percent_99" />
-                    <ImageView
-                        android:layout_width="wrap_content"
+                    </LinearLayout>
+
+                    <!--third column of textview-->
+                    <LinearLayout
+                        android:layout_width="0dp"
                         android:layout_weight="1"
-                        style="@style/image_card_middle"
-                        android:src="@drawable/ic_menu_send"
-                        android:layout_height="wrap_content" />
-                </LinearLayout>
-                </LinearLayout>
+                        android:orientation="vertical"
+                        android:weightSum="4"
+
+                        android:layout_height="match_parent"
+                        >
 
 
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="Growth"
+
+                            android:id="@+id/textView2"
+                            style="@style/card_middle_text"
+
+                            android:layout_weight="1"
+
+                            android:gravity="center"
+                            android:layout_gravity="center_horizontal" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+
+                            android:orientation="horizontal"
+                            android:layout_weight="1"
+                            android:weightSum="3"
+
+                            android:layout_height="0dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:text="11%"
+                                style="@style/card_middle_text"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:layout_weight="2"
+
+                                android:id="@+id/percent_33" />
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_weight="1"
+
+
+                                style="@style/image_card_middle"
+                                android:src="@drawable/ic_menu_gallery"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                        <LinearLayout
+
+                            android:layout_width="match_parent"
+
+                            android:orientation="horizontal"
+                            android:layout_weight="1"
+                            android:weightSum="3"
+
+                            android:layout_height="0dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:text="11%"
+                                style="@style/card_middle_text"
+                                android:layout_weight="2"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:id="@+id/percent_66" />
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_weight="1"
+                                style="@style/image_card_middle"
+                                android:src="@drawable/ic_menu_share"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+
+                            android:layout_weight="1"
+                            android:weightSum="3"
+                            android:orientation="horizontal"
+
+                            android:layout_height="0dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/card_middle_text"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:text="11%"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+
+                                android:layout_weight="2"
+                                android:id="@+id/percent_99" />
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_weight="1"
+                                style="@style/image_card_middle"
+                                android:src="@drawable/ic_menu_send"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
             </LinearLayout>
-        </LinearLayout>
 
 
 
-    </android.support.v7.widget.CardView>
-
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_weight="1"
-        android:id="@id/third_card"
-        android:layout_margin="8dp"
-        android:layout_height="140dp">
-        <RelativeLayout
+        </android.support.v7.widget.CardView>
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:text="Top/Bottom Student Status"
+            android:layout_marginLeft="16dp"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:textColor="#DDE0EE"/>
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/third_card"
+            android:layout_margin="8dp"
+            app:cardBackgroundColor="#9B91A4"
+            android:layout_height="140dp"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#7E85A2 ">
 
 
-            <!--Top rank-->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="21"
-                android:id="@+id/home_rank_no"
-                android:textColor="@color/green"
-                android:textSize="22sp"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="24dp"
-                android:layout_marginStart="40dp" />
+                <!--Top rank-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="21"
+                    android:id="@+id/home_rank_no"
+                    android:textColor="#DDE0EE"
+                    android:textSize="22sp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginStart="40dp" />
 
-            <!--top rank user name-->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-               android:textSize="18sp"
-                android:text="Krishna RA"
-                android:id="@+id/home_user_name_top_name"
-                android:gravity="center"
-                android:layout_marginLeft="8dp"
-                android:layout_below="@+id/home_rank_no"
-                android:layout_marginTop="6dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
-            <!--top rank static value-->
+                <!--top rank user name-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:text="Krishna RA"
+                    android:id="@+id/home_user_name_top_name"
+                    android:gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:layout_below="@+id/home_rank_no"
+                    android:layout_marginTop="6dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:textColor="#000000"/>
+                <!--top rank static value-->
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="Top Rank"
-                android:id="@+id/top_rank_text"
-                android:layout_marginTop="6dp"
-                android:layout_marginLeft="25dp"
-                android:layout_marginBottom="8dp"
-                android:gravity="center"
-                android:textColor="@color/green"
-                android:layout_below="@+id/home_user_name_top_name"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Top Rank"
+                    android:id="@+id/top_rank_text"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:layout_below="@+id/home_user_name_top_name"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
 
-            <!--Bottom rank-->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="1212"
-                android:layout_alignTop="@id/home_rank_no"
-                android:id="@+id/home_bottom_rank"
-                android:textColor="@color/green"
-                android:textSize="22sp"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="40dp"
-                android:layout_marginEnd="40dp" />
+                <!--Bottom rank-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1212"
+                    android:layout_alignTop="@id/home_rank_no"
+                    android:id="@+id/home_bottom_rank"
+                    android:textColor="#DDE0EE"
+                    android:textSize="22sp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginEnd="40dp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:text="Nandha Kumar"
-                android:layout_alignTop="@id/home_user_name_top_name"
-                android:id="@+id/bottom_rank_user_name"
-                android:gravity="center"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:text="Nandha Kumar"
+                    android:layout_alignTop="@id/home_user_name_top_name"
+                    android:id="@+id/bottom_rank_user_name"
+                    android:gravity="center"
 
-                android:layout_below="@+id/home_bottom_rank"
-                android:layout_marginRight="8dp"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true" />
+                    android:layout_below="@+id/home_bottom_rank"
+                    android:layout_marginRight="8dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="#000000"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="Bottom Rank"
-                android:id="@+id/bottom_rank_text"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Bottom Rank"
+                    android:id="@+id/bottom_rank_text"
 
-                android:layout_marginRight="25dp"
-                android:layout_marginEnd="25dp"
-                android:layout_alignBottom="@id/top_rank_text"
-                android:gravity="center"
-                android:textColor="@color/green"
-               android:layout_alignTop="@id/top_rank_text"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_alignBottom="@id/top_rank_text"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:layout_alignTop="@id/top_rank_text"
 
-                android:layout_alignParentEnd="true" />
+                    />
 
-        </RelativeLayout>
+            </RelativeLayout>
 
 
-    </android.support.v7.widget.CardView>
+        </android.support.v7.widget.CardView>
 
-</LinearLayout>
+    </LinearLayout>
 
 </ScrollView>

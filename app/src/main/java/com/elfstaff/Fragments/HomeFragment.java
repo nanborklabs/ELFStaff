@@ -17,8 +17,17 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
+import com.elfstaff.Network.ElfRequestQueue;
+import com.elfstaff.Prefs.MyPrefs;
 import com.elfstaff.R;
 import com.elfstaff.Utils;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 import butterknife.BindView;
 import butterknife.BindViews;
@@ -43,6 +52,12 @@ public class HomeFragment extends Fragment {
     @BindView(R.id.std_spinner)
     Spinner std_spinner;
     @BindView(R.id.subject_spinner) Spinner sub_spinner;
+
+    private static final String TAG = "STAFF HOME";
+    private static final String DASH_URL= "";
+String mStaffId;
+    MyPrefs myPrefs;
+    ElfRequestQueue mRequestQueue;
     @Override
     public void onDestroyView() {
         super.onDestroyView();
@@ -62,6 +77,40 @@ public class HomeFragment extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.d("home", "onCreate: ");
+        mRequestQueue = ElfRequestQueue.getInstance(getContext());
+
+
+
+        prepareDashBoardFor(mStaffId);
+
+    }
+
+    private void prepareDashBoardFor(String mStaffId) {
+
+        //request  body Objects
+        JSONObject mObject = new JSONObject();
+        try {
+            mObject.put("StaffId",mStaffId);
+
+        }
+        catch (Exception e ){
+            Log.d(TAG, "prepareDashBoardFor: ");
+        }
+        //request
+        JsonArrayRequest mRequest  = new JsonArrayRequest(Request.Method.POST, DASH_URL, mObject, new Response.Listener<JSONArray>() {
+            @Override
+            public void onResponse(JSONArray response) {
+                Log.d(TAG, "onResponse: ");
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.d(TAG, "onErrorResponse: ");
+            }
+        });
+
+        mRequestQueue.addToElfREquestQue(mRequest);
+
 
     }
 

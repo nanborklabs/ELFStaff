@@ -104,7 +104,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Learning Made Fun"
             android:id="@+id/fun_text"
             android:layout_marginTop="20dp"
             android:layout_below="@+id/sign_in"

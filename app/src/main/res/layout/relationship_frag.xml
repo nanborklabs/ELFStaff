@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical" android:layout_width="match_parent"
+                android:id="@+id/relation_scene_root"
+                android:layout_height="match_parent">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:orientation="vertical" android:layout_width="match_parent"
+                  android:id="@+id/relation_student_search_page"
+                  android:visibility="invisible"
+                  android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:text="Add Your Relationship"
+
+
+
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textSize="18sp"
+            android:gravity="center_horizontal"
+            android:text="Let them Know of your Progress"
+
+
+
+            />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_height="60dp"
+            android:prompt="Add Your Relationship"
+            android:id="@+id/relation_spinner">
+
+
+        </Spinner>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="Student Id"
+            android:id="@+id/relation_parent_ted"
+            android:layout_marginTop="45dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginLeft="32dp"
+
+            >
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Find Student"
+            android:id="@+id/relation_find_student_button"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal" />
+
+
+    </LinearLayout>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/relation_student_search_result"
+                    android:visibility="invisible"
+                    android:layout_width="match_parent" android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="120dp"
+            android:id="@+id/imageView"
+            android:src="@drawable/ic_account_circle_black_48dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Student Name"
+            android:layout_marginTop="20dp"
+            android:id="@+id/result_std_name"
+            android:layout_below="@+id/imageView"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Class"
+            android:layout_marginTop="10dp"
+            android:id="@+id/relation_result_class"
+            android:layout_below="@+id/result_std_name"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="School Name"
+            android:layout_marginTop="10dp"
+            android:id="@+id/relation_result_school_name"
+            android:layout_below="@+id/relation_result_class"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Student"
+            android:id="@+id/realtion_result_add_button"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="80dp" />
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

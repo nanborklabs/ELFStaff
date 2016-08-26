@@ -1,6 +1,7 @@
 package com.elfstaff;
 
 import android.animation.Animator;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TextInputEditText;
@@ -86,6 +87,10 @@ public class RegisterFragment extends Fragment{
 
 
 
+
+    RegistrationSuccess mCallback;
+
+    private RegisterFragment mFragment = null;
     public String getClassId(String mClass){
         switch (mClass){
             case "10":
@@ -140,6 +145,13 @@ public class RegisterFragment extends Fragment{
             default:
                 return "";
         }
+    }
+
+
+    @Override
+    public void onAttach(Context context) {
+        mCallback = (RegistrationSuccess)context;
+        super.onAttach(context);
     }
 
     private View mView;
@@ -253,7 +265,7 @@ public class RegisterFragment extends Fragment{
                     if (mStatuscode.equals("9999")){
 
 //                        email already exists
-                        Toast.makeText(getContext(),"e-Mail Already Exists",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getContext(),"E-Mail Already Exists",Toast.LENGTH_SHORT).show();
 
                         mPhoneBox.setText("");
                         eMailBox.setText("");
@@ -262,8 +274,13 @@ public class RegisterFragment extends Fragment{
                         getView().findViewById(R.id.ll_secondpage).setVisibility(View.INVISIBLE);
 
                     }else {
-                        getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frag_holder,new HomeFragment())
-                                .commit();
+                        if (mCallback !=null){
+                            mCallback.RegisteredUser(true);
+                        }else {
+                            throw new NullPointerException("CALL back must be implemented");
+                        }
+
+
                     }
                 }
                 catch (Exception e ){
@@ -321,5 +338,18 @@ public class RegisterFragment extends Fragment{
     @Override
     public void onDestroyView() {
         super.onDestroyView();
+    }
+
+    public Fragment newInstance() {
+        if (mFragment == null){
+            mFragment = new RegisterFragment();
+            return mFragment;
+        }
+        return mFragment;
+
+    }
+
+    public  interface RegistrationSuccess{
+        void RegisteredUser(boolean ok);
     }
 }
