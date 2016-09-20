@@ -46,7 +46,11 @@ public class RegisterFragment extends Fragment{
 
     private static final String TAG = "REGISTER";
 
-    private String[] mStates={"Tamil Nadu","Karnataka","Andhra Pradhesh","Kerala","Maharastra","Telungana","Goa","Himachel Pradesh","Assam"};
+    private String[] mStates=
+            {"Tamil Nadu","Karnataka",
+                    "Andhra Pradhesh","Kerala"
+                    ,"Maharastra","Telungana","Goa"
+                    ,"Himachel Pradesh","Assam"};
 
     //Views in this  page
     @BindView(R.id.name_text)
@@ -90,7 +94,7 @@ public class RegisterFragment extends Fragment{
 
     RegistrationSuccess mCallback;
 
-    private RegisterFragment mFragment = null;
+    private static RegisterFragment mFragment = null;
     public String getClassId(String mClass){
         switch (mClass){
             case "10":
@@ -150,7 +154,7 @@ public class RegisterFragment extends Fragment{
 
     @Override
     public void onAttach(Context context) {
-        mCallback = (RegistrationSuccess)context;
+        mCallback = (RegistrationSuccess)getActivity();
         super.onAttach(context);
     }
 
@@ -340,7 +344,7 @@ public class RegisterFragment extends Fragment{
         super.onDestroyView();
     }
 
-    public Fragment newInstance() {
+    public static  RegisterFragment newInstance() {
         if (mFragment == null){
             mFragment = new RegisterFragment();
             return mFragment;

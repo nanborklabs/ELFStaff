@@ -37,7 +37,7 @@
             android:layout_marginRight="32dp"
             android:layout_marginLeft="32dp"
             android:layout_height="60dp"
-            android:prompt="Add Your Relationship"
+
             android:id="@+id/relation_spinner">
 
 
@@ -78,7 +78,7 @@
             android:layout_width="100dp"
             android:layout_height="120dp"
             android:id="@+id/imageView"
-            android:src="@drawable/ic_account_circle_black_48dp"
+            android:src="@drawable/ic_announcement_black_48dp"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="50dp" />

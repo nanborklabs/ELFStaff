@@ -3,16 +3,21 @@ package com.elfstaff;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 
 import com.elfstaff.Fragments.ForgotPasswordFragment;
 import com.elfstaff.Fragments.LoginFragment;
+import com.elfstaff.Fragments.NewRegistration.BasicRegistration;
+import com.elfstaff.Fragments.NewRegistration.Detailsregistration;
 import com.elfstaff.Fragments.RelationshipFragment;
 
 /**
  * Created by nandhu on 26/8/16.
  */
-public class FirstActivity extends AppCompatActivity implements LoginFragment.Buttonclicked , RegisterFragment.RegistrationSuccess
+public class FirstActivity extends AppCompatActivity implements LoginFragment.Buttonclicked ,
+        BasicRegistration.basicReg
         , ForgotPasswordFragment.ChangePassword ,RelationshipFragment.RelationshipPagehandler{
 
 
@@ -34,9 +39,13 @@ public class FirstActivity extends AppCompatActivity implements LoginFragment.Bu
         setContentView(R.layout.first_activity);
 
 
+        Log.d(TAG, "onCreate: First Activity");
 
+        RegisterFragment mFragment  = RegisterFragment.newInstance();
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.first_frag_holder,new LoginFragment())
+        getSupportFragmentManager().beginTransaction()
+                .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                .replace(R.id.first_frag_holder,mFragment)
                 .commit();
 
 
@@ -89,16 +98,19 @@ public class FirstActivity extends AppCompatActivity implements LoginFragment.Bu
         startActivity(i);
     }
 
-    @Override
-    public void RegisteredUser(boolean ok) {
-        if (ok){
-            //user Registed show login Paage
-            getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.frag_holder,new LoginFragment())
-                    .commit();
-    }
 
-}
+
+
+
+    @Override
+    public void GotEmail(String email) {
+
+        Detailsregistration mFragment = Detailsregistration.newInstance(email);
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.first_frag_holder,mFragment )
+                .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                .commit();
+    }
 }
 
 

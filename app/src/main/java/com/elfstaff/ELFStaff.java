@@ -1,9 +1,11 @@
 package com.elfstaff;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -13,20 +15,33 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.animation.Interpolator;
 
 import com.elfstaff.Fragments.ContactFragment;
 import com.elfstaff.Fragments.HomeFragment;
 import com.elfstaff.Fragments.NotificationFragment;
 import com.elfstaff.Fragments.ReportFragment;
+import com.elfstaff.Prefs.MyPrefs;
 
 public class ELFStaff extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+    private static final String TAG = "MAIN ACTIVITY";
+
     Fragment mFragment;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if (isFirstTime()){
+            Log.d(TAG, "First Activity: ");
+            Intent  i = new Intent(this,FirstActivity.class);
+            i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(i);
+            finish();
+        }
         setContentView(R.layout.activity_elfstaff);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -54,6 +69,11 @@ public class ELFStaff extends AppCompatActivity
         }
     }
 
+
+    public boolean isFirstTime(){
+        MyPrefs prefs = new MyPrefs(this);
+       return prefs.isFirstTime();
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

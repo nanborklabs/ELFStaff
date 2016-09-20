@@ -100,5 +100,17 @@ public class MyPrefs {
     public boolean isStudentAcceptedRequested() {
         return sf.getBoolean("isStudentAccepted",false);
     }
+
+    public boolean isFirstTime() {
+          return sf.getBoolean("isFirstTime",true);
+    }
+
+
+   public void setIsFirstTime(boolean value){
+        final SharedPreferences.Editor ed = sf.edit();
+        ed.putBoolean("isFirstTime",value);
+        ed.apply();
+    }
+
 }
 
